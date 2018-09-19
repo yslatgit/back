@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180823 14:56:20.169" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
+<suite id="s1" name="百度搜索测试套件">
+<test id="s1-t1" name="启动浏览器">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${baidu}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180823 14:56:20.406" level="INFO">Opening browser 'Chrome' to base url 'https://www.baidu.com'.</msg>
+<status status="PASS" endtime="20180823 14:56:23.015" starttime="20180823 14:56:20.405"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>百度一下，你就知道</arg>
+</arguments>
+<msg timestamp="20180823 14:56:23.028" level="INFO">Page title is '百度一下，你就知道'.</msg>
+<status status="PASS" endtime="20180823 14:56:23.029" starttime="20180823 14:56:23.016"></status>
+</kw>
+<status status="PASS" endtime="20180823 14:56:23.030" critical="no" starttime="20180823 14:56:20.402"></status>
+</test>
+<test id="s1-t2" name="百度搜索测试">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_input}</arg>
+<arg>测试教程网</arg>
+</arguments>
+<msg timestamp="20180823 14:56:23.043" level="INFO">Typing text '测试教程网' into text field 'id=kw'.</msg>
+<status status="PASS" endtime="20180823 14:56:23.175" starttime="20180823 14:56:23.041"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${search_btn}</arg>
+</arguments>
+<msg timestamp="20180823 14:56:23.177" level="INFO">Clicking button 'id=su'.</msg>
+<status status="PASS" endtime="20180823 14:56:23.280" starttime="20180823 14:56:23.176"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180823 14:56:28.282" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180823 14:56:28.284" starttime="20180823 14:56:23.281"></status>
+</kw>
+<status status="PASS" endtime="20180823 14:56:28.285" critical="no" starttime="20180823 14:56:23.033"></status>
+</test>
+<test id="s1-t3" name="断言验证搜索结果标题">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>测试教程网_百度搜索</arg>
+</arguments>
+<msg timestamp="20180823 14:56:28.318" level="INFO">Page title is '测试教程网_百度搜索'.</msg>
+<status status="PASS" endtime="20180823 14:56:28.319" starttime="20180823 14:56:28.303"></status>
+</kw>
+<status status="PASS" endtime="20180823 14:56:28.320" critical="no" starttime="20180823 14:56:28.291"></status>
+</test>
+<test id="s1-t4" name="关闭浏览器">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180823 14:56:29.450" starttime="20180823 14:56:28.328"></status>
+</kw>
+<status status="PASS" endtime="20180823 14:56:29.452" critical="no" starttime="20180823 14:56:28.323"></status>
+</test>
+<status status="PASS" endtime="20180823 14:56:29.461" starttime="20180823 14:56:20.177"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="0">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+<stat info="critical" fail="0" pass="0">百度搜索</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="百度搜索测试套件" pass="4">百度搜索测试套件</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
